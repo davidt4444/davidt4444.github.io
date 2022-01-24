@@ -1,0 +1,313 @@
+h1, h2, h3
+{
+    color:#333;
+    font-family:sans-serif;
+}
+a
+{
+    text-decoration:none;
+    color:#333;
+    font-family:sans-serif;
+}
+body
+{
+    background-color:white;
+    margin-top:0%;
+}
+.fore
+{
+    background-color:white;
+    width:900px;
+    margin-top:0%;
+}
+.content
+{
+    padding:3;
+    width:99%;
+    clear:both;
+}
+.header
+{
+    background-color:#003359;
+    padding:2;
+    height:45px;
+}
+.StayRightForLife_header
+{
+    background-color:#003359;
+    padding:0;
+    height:130;
+}
+.StayRightForLife_message
+{
+    position:relative;
+    margin-left:425px;
+    font-size:18px;
+    text-align:center;
+    color:white;width:300;
+}
+.StayRightForLife_banner
+{
+    position:absolute;
+}
+.grey_box
+{
+    font-size:4ex;
+    color:white;
+    font-family:sans-serif;
+    margin-left:31%;
+    width:16%;
+    float:left;
+    background-color:#003359;
+    border-right-width:thin;
+    border-right-style:solid;
+    border-right-color:white;
+    border-left-width:thin;
+    border-left-style:solid;
+    border-left-color:white;
+    border-bottom-width:thin;
+    border-bottom-style:solid;
+    border-bottom-color:white;
+    border-top-width:thin;
+    border-top-style:solid;
+    border-top-color:white;
+    text-align:left;
+}
+.white_box
+{
+    font-size:4ex;
+    color:#003359;
+    font-family:sans-serif;
+    width:21%;
+    float:left;
+    background-color:white;
+    border-right-width:thin;
+    border-right-style:solid;
+    border-right-color:white;
+    border-left-width:thin;
+    border-left-style:solid;
+    border-left-color:white;
+    border-bottom-width:thin;
+    border-bottom-style:solid;
+    border-bottom-color:white;
+    border-top-width:thin;
+    border-top-style:solid;
+    border-top-color:white;
+    text-align:left;
+}
+.menu
+{
+    clear:both;
+    height:1.5em;
+    background-color:#156570;
+    color:white;
+    border-top-width:thin;
+    border-top-style:solid;
+    border-top-color:#156570;
+    border-bottom-width:thin;
+    border-bottom-style:solid;
+    border-bottom-color:#156570;
+    text-align:left;
+}
+.menu a
+{
+    color:white;
+    text-decoration:none;
+}
+.StayRightForLife_menu
+{
+    clear:both;
+    height:1.5em;
+    background-color:#C11B17;
+    color:white;
+    border-top-width:thin;
+    border-top-style:solid;
+    border-top-color:#C11B17;
+    border-bottom-width:thin;
+    border-bottom-style:solid;
+    border-bottom-color:#C11B17;
+}
+.StayRightForLife_menu a
+{
+    color:white;
+    text-decoration:none;
+}
+
+.classic
+{
+    clear:both;
+    height:1.5em;
+    background-color:brown;
+    color:white;
+    border-top-width:thin;
+    border-top-style:solid;
+    border-top-color:#156570;
+    border-bottom-width:thin;
+    border-bottom-style:solid;
+    border-bottom-color:#156570;
+}
+.classic a
+{
+    color:white;
+    text-decoration:none;
+}
+.submenu
+{
+    clear:both;
+    height:1.5em;
+    background-color:white;
+    color:black;
+    border-top-width:thin;
+    border-top-style:solid;
+    border-top-color:#156570;
+    border-right-width:thin;
+    border-right-style:solid;
+    border-right-color:#156570;
+    border-left-width:thin;
+    border-left-style:solid;
+    border-left-color:#156570;
+    border-bottom-width:thin;
+    border-bottom-style:solid;
+    border-bottom-color:#156570;
+}
+.submenu a
+{
+    color:black;
+    text-decoration:none;
+}
+.StayRightForLife_submenu
+{
+    clear:both;
+    height:1.5em;
+    background-color:white;
+    color:black;
+    border-top-width:thin;
+    border-top-style:solid;
+    border-top-color:#C11B17;
+    border-right-width:thin;
+    border-right-style:solid;
+    border-right-color:#C11B17;
+    border-left-width:thin;
+    border-left-style:solid;
+    border-left-color:#C11B17;
+    border-bottom-width:thin;
+    border-bottom-style:solid;
+    border-bottom-color:#C11B17;
+}
+.StayRightForLife_submenu a
+{
+    color:black;
+    text-decoration:none;
+}
+.tab
+{
+    font-size:1em;
+    float: left;
+    width:12.5%;
+    height:100%;
+    border-right-width:thin;
+    border-right-style:solid;
+    border-right-color:white;
+}
+.tabhighlight
+{
+    float: left;
+    width:12.5%;
+    height:100%;
+    border-right-width:thin;
+    border-right-style:solid;
+    border-right-color:156570;
+}
+.tabhighlight_right
+{
+    float: left;
+    width:16.5%;
+}
+.StayRightForLife_tab
+{
+    font-size:1em;
+    float: left;
+    width:12.5%;
+    height:100%;
+    border-right-width:thin;
+    border-right-style:solid;
+    border-right-color:white;
+}
+.StayRightForLife_tabhighlight
+{
+    float: left;
+    width:12.5%;
+    height:100%;
+    border-right-width:thin;
+    border-right-style:solid;
+    border-right-color:9e3039;
+}
+.StayRightForLife_tabhighlight_right
+{
+    float: left;
+    width:12.5%;
+}
+.lineall
+{
+    border-bottom-width:thin;
+    border-bottom-style:solid;
+    border-bottom-color:black;
+    width: 100%;
+}
+.lineFull
+{
+    border-bottom-width:thin;
+    border-bottom-style:solid;
+    border-bottom-color:black;
+    width: 90%;
+}
+.lineHalf
+{
+    border-bottom-width:thin;
+    border-bottom-style:solid;
+    border-bottom-color:black;
+    width: 75%;
+}
+.lineQuarter
+{
+    border-bottom-width:thin;
+    border-bottom-style:solid;
+    border-bottom-color:black;
+    width: 50%;
+}
+.section
+{
+    border:1px solid black;
+    padding:5px;
+    margin:1%;
+    float:left;
+    width:29%;
+    
+}
+.section_break
+{
+    clear:both;
+}
+.top_stories
+{
+    float:left;
+    border:1px solid black;
+    padding:5px;
+    margin:1%;
+    float:left;
+    width:61%;
+}
+.whats_new
+{
+    float:left;
+    border:1px solid black;
+    padding:5px;
+    margin:1%;
+    float:left;
+    width:29%;
+}
+.ExperienceOffset
+{
+    clear:none;
+    margin-left:30px;
+}
