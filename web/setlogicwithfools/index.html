@@ -1,80 +1,30 @@
-
 <link rel="stylesheet" type="text/css" href="../davidthigpen/style.css" />
 
 <meta name="verify-v1" content="9dZIPj/9GKEMGUbx63ZaVU0IUOre5n0dgencN36bn/4=">
     <title>Welcome to SetLogicWithFools.com</title>
     
-    
-    
-    <div class="fore">
-        <div class="side"></div>
+<div id ="content" class="content">
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
+<script src="data/data.json" type="text/javascript"></script>
 
-        <object width=100% height=40 data="header.html"></object>
-        <object width=100% height=26 data="menu.html"></object>
-<!--        <object width=100% height=26 data="about_sub.html"></object>-->
-            <br>
-            <div class="content">
-                <div style="float:right; clear:none; padding:3px;">
-                    
-                </div>
-                
-                <!--<div>-->
-                <!--<object id="stuff1" data="res_academic_publications.html"></object>-->
-                <!--<embed id="stuff2" src="res_academic_publications.html" />-->
-                <!--</div>-->
-                <div class="content">
-                    <div width=480>If I post an image on this site, there will be a link to where to purchase the image on clothing, mugs, etc. beneath the image. If enough people follow this and buy stuff, I will create a book with explanations of the images that you can buy.</div>
-                    
-                    <object width=100% height=640 data="posts/peace_be_with_you_corona_virus_edition.html"></object>
-                    <object width=100% height=640 data="posts/micromanagers_make_terrible_political_decisions.html"></object>
-                    <object width=100% height=640 data="posts/think_outside_the_box_but_inside_the_circle.html"></object>
-                    <object width=100% height=640 data="posts/one_person_one_vote.html"></object>
-                    <object width=100% height=640 data="posts/mississippi_delegate_selection_process.html"></object>
-                    <object width=100% height=640 data="posts/actual_public_caucus_process.html"></object>
-                    <object width=100% height=640 data="posts/actual_public_caucus_election.html"></object>
-                    <object width=100% height=640 data="posts/bartender_trick.html"></object>
-                    <object width=100% height=640 data="posts/campaign_advertising.html"></object>
-                    <object width=100% height=640 data="posts/campaign_speeches.html"></object>
-                    <object width=100% height=640 data="posts/a_campaign_is_born.html"></object>
-                    <object width=100% height=640 data="posts/interesting_things_about_public_figures.html"></object>
-                    <object width=100% height=640 data="posts/think_positive_not_negative.html"></object>
-                    <object width=100% height=640 data="posts/the_usa_with_friends.html"></object>
-                    <object width=100% height=640 data="posts/which_country_should_i_visit_it_must_be_work_related.html"></object>
-                    <object width=100% height=640 data="posts/the_universe_is_infinite.html"></object>
-                    <object width=100% height=640 data="posts/signal_and_the_noise_bonus.html"></object>
-                    <object width=100% height=640 data="posts/corona_virus_histeria.html"></object>
-                    <object width=100% height=640 data="posts/spring_is_coming_with_the_flower_of_chivalry.html"></object>
-                    <object width=100% height=640 data="posts/the_next_leg_of_life.html"></object>
-                    <object width=100% height=640 data="posts/must_not_get_cellphone_out_of_pocket.html"></object>
-                    <object width=100% height=640 data="posts/minesweeper_metoo.html"></object>
-                    <object width=100% height=640 data="posts/how_i_balance_stress.html"></object>
-                    <object width=100% height=640 data="posts/proposed_city_renovations_for_jackson_ms_post_pearl_river_flooding.html"></object>
-                    <object width=100% height=640 data="posts/short_diagram_of_life.html"></object>
-                    <object width=100% height=640 data="posts/unrelated_good_things.html"></object>
-                    <object width=100% height=640 data="posts/walking.html"></object>
-                    <object width=100% height=640 data="posts/medical_expenses.html"></object>
-                    <object width=100% height=640 data="posts/nothing_equals_nothing.html"></object>
-                    <object width=100% height=640 data="posts/cross_country_runner_ponders_image_on_letterman_jacket.html"></object>
-                    <object width=100% height=640 data="posts/rpo.html"></object>
-                    <object width=100% height=640 data="posts/ground_rule_double.html"></object>
-                    <object width=100% height=640 data="posts/drawing_board.html"></object>
-                    <object width=100% height=640 data="posts/post_template.html"></object>
-                    <object width=100% height=315 data="posts/post1.html"></object>
-                    <object width=100% height=2990 data="res_experience.html"></object>
-                    <object width=100% height=405 data="res_interests.html"></object>
-                    <object width=100% height=185 data="res_academic_publications.html"></object>
-                    <object width=100% height=365 data="res_awards_activities.html"></object>
-                </div>
-                
-                
-            </div>
-            
-    </div>
-    
-    
-    <object width=100% height=40 data="../footer.html"></object>
+<script>
+$(document).ready( function() {
+    var base = "https://davidt4444.github.io/web/setlogicwithfools/";
+    $("#content").append($("<div />").load(base+"header.html"));
+    $("#content").append($("<div />").load(base+"menu.html"));
 
-    <object width=0 height=0 data="../tracker.html"></object>
+        data.sort(function (a, b) {
+            return new Date(b.date).getTime() - new Date(a.date).getTime();
+        });
+        var i=0;
+        var length = data.length;
+        $("#content").append($("<div width=480>If I post an image on this site, there will be a link to where to purchase the image on clothing, mugs, etc. beneath the image. If enough people follow this and buy stuff, I will create a book with explanations of the images that you can buy.</div>"));
+        for(i=0; i<length;i++)
+        {
+            $("#content").append($("<div><div><h2><a href=\""+base+"posts/"+data[i].titleAddress+"\">"+data[i].title+"</a></h2><div><ul><li>By <a href=\""+data[i].authorAddress+"\">"+data[i].author+"</a></li><li><a href=\""+data[i].dateAddress+"\">"+data[i].date+"</a></li></ul></div></div><div><iframe src=\""+data[i].drawingAddress+"\" width=\"640\" height=\"480\"></iframe></div><div>"));
 
-
-    </body></html>
+<!--            $("#content").append($("<div />").load(base+"posts/"+data[i].titleAddress));-->
+        }
+});
+</script>
