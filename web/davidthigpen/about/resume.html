@@ -1,45 +1,34 @@
 
-<link rel="stylesheet" type="text/css" href="../style.css" />
 
-<meta name="verify-v1" content="9dZIPj/9GKEMGUbx63ZaVU0IUOre5n0dgencN36bn/4=">
-    <title>Welcome to DavidThigpen.com</title>
+<link rel="stylesheet" type="text/css" href="https://davidt4444.github.io/web/davidthigpen/style.css" />
 
-    
-    
-    <div class="fore">
-        <div class="side"></div>
+        <meta name="verify-v1" content="9dZIPj/9GKEMGUbx63ZaVU0IUOre5n0dgencN36bn/4=">
+        <title>Welcome to DavidThigpen.com</title>
+        
+        <div class="fore">
+            <div class="side"></div>
 
-        <object width=100% height=40 data="../header.html"></object>
-        <object width=100% height=26 data="../menu.html"></object>
-        <object width=100% height=26 data="about_sub.html"></object>
-        <input type="button" value="print" onclick="window.open(&#39;resume_print.html&#39;,&#39;Resume&#39;,&#39;width=613,height=793,resizable=yes,scrollbars=yes&#39;)" style="float:left;clear:both;">
-            <br>
-            <div class="content">
-                <div style="float:right; clear:none; padding:3px;">
-                    
-                </div>
-                
-                <!--<div>-->
-                <!--<object id="stuff1" data="res_academic_publications.html"></object>-->
-                <!--<embed id="stuff2" src="res_academic_publications.html" />-->
-                <!--</div>-->
-                <div class="content">
-                    <object width=100% height=315 data="res_education.html"></object>
-                    <object width=100% height=2990 data="res_experience.html"></object>
-                    <object width=100% height=405 data="res_interests.html"></object>
-                    <object width=100% height=185 data="res_academic_publications.html"></object>
-                    <object width=100% height=365 data="res_awards_activities.html"></object>
-                </div>
-                
-                
+            <div id ="content" class="content">
             </div>
-            
-    </div>
-    
-    
-    <object width=100% height=40 data="../footer.html"></object>
+        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
-    <object width=0 height=0 data="../tracker.html"></object>
+    <script>
+    $(document).ready( function() {
+        var base = "https://davidt4444.github.io/web/davidthigpen/";
+        $("#content").append($("<div />").load(base+"header.html"));
+        $("#content").append($("<div />").load(base+"menu.html"));
+        $("#content").append($("<div />").load(base+"about/about_sub.html"));
+        //$("#content").append($("<img style=\"clear:both;\" align=\"center\" width=80% src=\"header.png\" />"));
+        $("#content").append($("<p>David A. Thigpen<br>P.O. Box 3588<br>Jackson, MS 39207<br><a href=\"mailto:david@davidthigpen.com\">david@davidthigpen.com</a><br>601.826.9237</p>"));
+        $("#content").append($("<div />").load(base+"about/res_education.html"));
+        $("#content").append($("<div />").load(base+"about/res_experience.html"));
+        $("#content").append($("<div />").load(base+"about/res_interests.html"));
+        $("#content").append($("<div />").load(base+"about/res_academic_publications.html"));
+        $("#content").append($("<div />").load(base+"about/res_awards_activities.html"));
 
+        $("#content").append($("<div />").load(base+"footer.html"));
+        $("#content").append($("<div />").load(base+"tracker.html"));
 
-    </body></html>
+    });
+    </script>
