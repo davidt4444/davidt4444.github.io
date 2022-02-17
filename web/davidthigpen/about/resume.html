@@ -20,6 +20,8 @@
         $("#content").append($("<div />").load(base+"menu.html"));
         $("#content").append($("<div />").load(base+"about/about_sub.html"));
         //$("#content").append($("<img style=\"clear:both;\" align=\"center\" width=80% src=\"header.png\" />"));
+        $("#content").append($("<div><input type=\"button\" value=\"print\" onclick=\"window.open(&#39;resume_print.html&#39;,&#39;Resume&#39;,&#39;width=613,height=793,resizable=yes,scrollbars=yes&#39;)\" style=\"float:left;clear:both;\"></div>"));
+
         $("#content").append($("<p>David A. Thigpen<br>P.O. Box 3588<br>Jackson, MS 39207<br><a href=\"mailto:david@davidthigpen.com\">david@davidthigpen.com</a><br>601.826.9237</p>"));
         $("#content").append($("<div />").load(base+"about/res_education.html"));
         $("#content").append($("<div />").load(base+"about/res_experience.html"));
