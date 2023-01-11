@@ -14,10 +14,29 @@
 
     <script>
     $(document).ready( function() {
+        if(window.location.href.match(".*davidthigpen.com.*"))
+        {
+            var base = "https://www.davidthigpen.com/web/davidthigpen/";
+            $("#content").append($("<div />").load(base+"index.html"));
+        }
+        else if(window.location.href.match(".*thigpenconsulting.com.*"))
+        {
+            var base = "https://www.thigpenconsulting.com/web/thigpenconsulting/";
+            $("#content").append($("<div />").load(base+"index.html"));
+
+        }
+        else if(window.location.href.match(".*setlogicwithfools.com.*"))
+        {
+            var base = "https://www.setlogicwithfools.com/web/setlogicwithfools/";
+            $("#content").append($("<div />").load(base+"index.html"));
+
+        }
+        /*
         var base = "./web/";
         $("#content").append($("<a href=\"https://www.davidthigpen.com/web/davidthigpen/\"><div /></a>").load(base+"davidthigpen/header.html"));
         $("#content").append($("<a href=\"https://www.thigpenconsulting.com/web/thigpenconsulting/\"><img width=\"300\" src=\""+base+"thigpenconsulting/ThigpenConsultingLogo.jpg\"/></a>"));
         //$("#content").append($("<div />").load(base+"thigpenconsulting/header.html"));
         $("#content").append($("<a href=\"https://www.setlogicwithfools.com/web/setlogicwithfools/\"><div /></a>").load(base+"setlogicwithfools/header.html"));
+         */
     });
     </script>
