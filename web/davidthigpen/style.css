@@ -182,6 +182,10 @@ body
     color:white;
     text-decoration:none;
 }
+.exp_technologies
+{
+    display: none;
+}
 .submenu
 {
     clear:both;
