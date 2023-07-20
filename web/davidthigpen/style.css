@@ -186,6 +186,10 @@ body
 {
     display: none;
 }
+.technologies_technologies
+{
+    display:all;
+}
 .submenu
 {
     clear:both;
