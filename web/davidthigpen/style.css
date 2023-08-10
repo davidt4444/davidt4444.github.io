@@ -186,6 +186,10 @@ body
 {
     display: none;
 }
+.exact_date_hours
+{
+    display: none;
+}
 .technologies_technologies
 {
     display:all;
