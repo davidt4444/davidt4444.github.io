@@ -1,0 +1,58 @@
+<html>
+<head>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding:5px;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th colspan="2">Submittal Template</th>
+    </tr>
+    <tr>
+        <td>Full Name:</td>
+        <td>David Thigpen</td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td>david@davidthigpen.com</td>
+    </tr>
+    <tr>
+        <td>Phone Number:</td>
+        <td>601-826-9237</td>
+    </tr>
+    <tr>
+        <td>Address/Current Location:</td>
+        <td>Jackson, MS</td>
+    </tr>
+    <tr>
+        <td>Citizenship Status:</td>
+        <td>US Citizen</td>
+    </tr>
+    <tr>
+        <td>Last 4 SSN:</td>
+        <td><div id="ssn4" class="ssn4"></div></td>
+    </tr>
+    <tr>
+        <td>DOB(Month/Day):</td>
+        <td>03/21</td>
+    </tr>
+    <tr>
+        <td>Availability for the interview</td>
+        <td>Afternoon (Schedule ahead)</td>
+    </tr>
+    <tr>
+        <td>LinkedIn:</td>
+        <td>https://www.linkedin.com/in/david-thigpen-65979a53/</td>
+    </tr>
+</table>
+
+    <script>
+        document.getElementById("ssn4").innerText = Math.floor(Math.random() * 9000 + 1000);
+    </script>
+</body>
