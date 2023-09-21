@@ -40,7 +40,7 @@
     </tr>
     <tr>
         <td>DOB(Month/Day):</td>
-        <td>03/21</td>
+        <td><span id="month" class="month"></span>/<span id="day" class="day"></span></td>
     </tr>
     <tr>
         <td>Availability for the interview</td>
@@ -54,5 +54,7 @@
 
     <script>
         document.getElementById("ssn4").innerText = Math.floor(Math.random() * 9000 + 1000);
+        document.getElementById("month").innerText = Math.floor(Math.random() * 11 + 1);
+        document.getElementById("day").innerText = Math.floor(Math.random() * 27 + 1);
     </script>
 </body>
