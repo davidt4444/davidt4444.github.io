@@ -41,7 +41,11 @@
         {
             window.title = "Welcome to the GitHub Profile for davidt4444";
             var base = "https://davidt4444.github.io/web/davidthigpen/";
-            $("#content").append($("<div />").load(base+"index.html"));
+            $("#content").append($("<div />").load(base+"header.html"));
+            $("#content").append($("<div />").load(base+"menu.html"));
+            $("#content").append($("<p>This is a web site devoted to some of my hobbies. Please excuse its plainness. It was designed to be simple and clean. It was made this way, so that it would load faster and looks similar in both text and regular browsers. I have tried to avoid doing anything that would make it look dated.</p>"));
+            $("#content").append($("<div />").load(base+"footer.html"));
+            $("#content").append($("<div />").load(base+"tracker.html"));
 
         }
         /*
