@@ -184,7 +184,7 @@ body
 }
 .exp_technologies
 {
-    display: none;
+    display: table-cell;
 }
 .tc_roles
 {
@@ -196,7 +196,7 @@ body
 }
 .technologies_technologies
 {
-    display:all;
+    display:none;
 }
 .submenu
 {
