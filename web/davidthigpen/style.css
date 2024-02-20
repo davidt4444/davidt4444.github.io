@@ -188,7 +188,7 @@ body
 }
 .tc_roles
 {
-    display: none;
+    display: table-cell;
 }
 .exact_date_hours
 {
