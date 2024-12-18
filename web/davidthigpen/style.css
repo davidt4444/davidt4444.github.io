@@ -186,6 +186,36 @@ body
 {
     display: table-cell;
 }
+.exp_technologies li
+{
+    display: inline;
+}
+.exp_technologies li:after
+{
+    content: ", ";
+}
+.exp_technologies li:last-child:after
+{
+    content: "";
+}
+
+.technologies_technologies
+{
+    display:table-cell;
+}
+.technologies_technologies li
+{
+    display: inline;
+}
+.technologies_technologies li:after
+{
+    content: ", ";
+}
+.technologies_technologies li:last-child:after
+{
+    content: "";
+}
+
 .tc_roles
 {
     display: none;
@@ -194,10 +224,7 @@ body
 {
     display: none;
 }
-.technologies_technologies
-{
-    display:none;
-}
+
 .submenu
 {
     clear:both;
