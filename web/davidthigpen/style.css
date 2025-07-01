@@ -182,6 +182,10 @@ body
     color:white;
     text-decoration:none;
 }
+.current_angular
+{
+    display: none;
+}
 .exp_technologies
 {
     display: table-cell;
