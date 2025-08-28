@@ -1,0 +1,51 @@
+<style>
+    #box{
+        font-size: 8em;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+</style>
+<div id="box">
+    <div id="box2">
+        <div id="time"></div>
+        <div id="zone">America/Chicago</div>
+        <div id="date"></div>
+    </div>
+</div>
+<script>
+function setTime() { 
+    var locale = "en-US";
+    var current = new Date();
+    a = { 
+        hour: "numeric", 
+        minute: "2-digit", 
+        second: "2-digit" 
+    }; 
+    var current_time = current.toLocaleTimeString(locale, a); 
+    var l = { 
+        weekday: "long", 
+        year: "numeric", 
+        month: "long", 
+        day: "numeric" 
+    }; 
+    var current_day = current.toLocaleDateString(locale, l); 
+    document.getElementById("time").innerHTML = current_time; 
+    document.getElementById("date").innerHTML = current_day; 
+}
+function myTimer() { 
+    setTime() 
+} 
+window.addEventListener(
+    "DOMContentLoaded", 
+    function () { 
+        setInterval(
+            function () { 
+                myTimer() 
+            }, 
+            500
+        )
+    }
+);
+
+
+</script>
