@@ -186,6 +186,23 @@ body
 {
     display: none;
 }
+.exp_publications
+{
+    display: table-cell;
+}
+.exp_publications li
+{
+    display: inline;
+}
+.exp_publications li:after
+{
+    content: ", ";
+}
+.exp_publications li:last-child:after
+{
+    content: "";
+}
+
 .exp_technologies
 {
     display: table-cell;
