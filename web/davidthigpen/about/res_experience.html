@@ -894,11 +894,13 @@
     </ul>
 </div>
 
-<!-- Test 
+<!-- <button onclick="gen_ast()">Load Data</button>
+Test 
 <pre id="output">
 </pre>
-<button onclick="load_data()">Load Data</button>
- -->
+<div id="resume">
+</div> -->
+
 <script>
 function strip_comma_sub_list(root_element){
     var stuff = [];
@@ -1000,6 +1002,51 @@ function load_data(){
             companies.push(company);
         }
     }
-    document.getElementById("output").innerHTML = JSON.stringify(companies)
+    document.getElementById("output").innerHTML = JSON.stringify(companies);
+    return companies;
+}
+function gen_ast(){
+    var companies = load_data();
+    var i=0;
+    var html_output="";
+    for(i=0;i<companies.length;i++){
+        var j = 0;
+        for(j=0; j<companies[i].positions.length;j++){
+            html_output += ""+companies[i].positions[j].title+"<br />";
+
+            html_output += ""+companies[i].name+"";
+            html_output += " - "+companies[i].location+"";
+            // html_output += ""+companies[i].date_range+"<br />";
+            // html_output += ""+companies[i].month_range+"<br />";
+
+            // html_output += ""+companies[i].positions[j].date_range+"<br />";
+            html_output += "|"+companies[i].positions[j].month_range+"";
+            html_output += "<ul>";
+
+            var l=0;
+            for(l=0; l<companies[i].description.bullets.length;l++){
+                html_output += "<li>"+companies[i].description.bullets[l]+"</li>";
+            }
+            if(companies[i].description.technologies.length>0){
+                html_output += "<li>Technologies: ";
+            }
+            for(l=0; l<companies[i].description.technologies.length;l++){
+                html_output += ""+companies[i].description.technologies[l]+", ";
+            }
+            html_output += "</li>";
+            if(companies[i].description.publications.length>0){
+                html_output += "<li>Publications:<br />";
+            }
+            for(l=0; l<companies[i].description.publications.length;l++){
+                html_output += "- "+companies[i].description.publications[l]+", ";
+            }
+            html_output += "</li>";
+            html_output += "</ul>";
+
+
+         }
+    }
+    document.getElementById("resume").innerHTML = html_output;
+
 }
 </script>
