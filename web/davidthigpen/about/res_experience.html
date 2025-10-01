@@ -893,13 +893,14 @@
         </ul>
     </ul>
 </div>
+<div id="resume"></div> 
 
-<!-- <button onclick="gen_ast()">Load Data</button>
+<!-- 
+<button onclick="gen_ast()">Load Data</button>
 Test 
 <pre id="output">
 </pre>
-<div id="resume">
-</div> -->
+-->
 
 <script>
 function strip_comma_sub_list(root_element){
@@ -1002,7 +1003,7 @@ function load_data(){
             companies.push(company);
         }
     }
-    document.getElementById("output").innerHTML = JSON.stringify(companies);
+    // document.getElementById("output").innerHTML = JSON.stringify(companies);
     return companies;
 }
 function gen_ast(){
@@ -1047,6 +1048,7 @@ function gen_ast(){
          }
     }
     document.getElementById("resume").innerHTML = html_output;
+    document.getElementById("companies").hidden = true;
 
 }
 </script>
