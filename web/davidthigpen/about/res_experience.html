@@ -1013,7 +1013,6 @@ function exp_gen_ast(){
     for(i=0;i<companies.length;i++){
         var j = 0;
         for(j=0; j<companies[i].positions.length;j++){
-            html_output += ""+companies[i].positions[j].title+"<br />";
 
             html_output += ""+companies[i].name+"";
             html_output += " - "+companies[i].location+"";
@@ -1021,7 +1020,8 @@ function exp_gen_ast(){
             // html_output += ""+companies[i].month_range+"<br />";
 
             // html_output += ""+companies[i].positions[j].date_range+"<br />";
-            html_output += "|"+companies[i].positions[j].month_range+"";
+            html_output += "|"+companies[i].positions[j].month_range+"<br />";
+            html_output += ""+companies[i].positions[j].title+"";
             html_output += "<ul>";
 
             var l=0;
