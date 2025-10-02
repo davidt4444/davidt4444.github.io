@@ -6,13 +6,13 @@
 <div id="degrees">
     <h4>The University of Mississippi; Oxford, MS</h4>
     <ul>
-        <li>M.S. Computer and Information Science | August 2011</li>
-        <li>M.A. Economics | May 2011</li>
-        <li>M.A. Journalism | December 2010</li>
-        <li>B.A. Computer and Information Science | August 2007</li>
-        <li>B.A. Economics | August 2007</li>
-        <li>B.A. Journalism | August 2007</li>
-        <li>B.S. Math | August 2007</li>
+        <li>M.S. Computer and Information Science, August 2011</li>
+        <li>M.A. Economics, May 2011</li>
+        <li>M.A. Journalism, December 2010</li>
+        <li>B.A. Computer and Information Science, August 2007</li>
+        <li>B.A. Economics, August 2007</li>
+        <li>B.A. Journalism, August 2007</li>
+        <li>B.S. Math, August 2007</li>
     </ul>
 </div>
 <div id="resume_edu"></div> 
@@ -51,7 +51,7 @@ function edu_load_data(){
                         date:""
                     }
                     var text_holder = degree_breakout[j].innerHTML; 
-                    var whole_holder = text_holder.split(' | ')
+                    var whole_holder = text_holder.split(', ')
                     degree.name = whole_holder[0];
                     degree.date = whole_holder[1];
                     university.degrees.push(degree);
