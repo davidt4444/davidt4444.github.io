@@ -1006,7 +1006,7 @@ function exp_load_data(){
     // document.getElementById("output").innerHTML = JSON.stringify(companies);
     return companies;
 }
-function exp_gen_ast(){
+function exp_gen_ast(exclude_tech_publications=true){
     var companies = exp_load_data();
     var i=0;
     var html_output="";
@@ -1028,28 +1028,28 @@ function exp_gen_ast(){
             for(l=0; l<companies[i].description.bullets.length;l++){
                 html_output += "<li>"+companies[i].description.bullets[l]+"</li>";
             }
-            /*
-            if(companies[i].description.technologies.length>0){
-                html_output += "<li>Technologies: ";
-                for(l=0; l<companies[i].description.technologies.length;l++){
-                    html_output += ""+companies[i].description.technologies[l];
-                    if((l+1)<companies[i].description.technologies.length){
-                        html_output += ", ";
+            if(exclude_tech_publications==false){
+                if(companies[i].description.technologies.length>0){
+                    html_output += "<li>Technologies: ";
+                    for(l=0; l<companies[i].description.technologies.length;l++){
+                        html_output += ""+companies[i].description.technologies[l];
+                        if((l+1)<companies[i].description.technologies.length){
+                            html_output += ", ";
+                        }
                     }
+                    html_output += "</li>";
                 }
-                html_output += "</li>";
-            }
-            if(companies[i].description.publications.length>0){
-                html_output += "<li>Publications: ";
-                for(l=0; l<companies[i].description.publications.length;l++){
-                    html_output += ""+companies[i].description.publications[l];
-                    if((l+1)<companies[i].description.technologies.length){
-                        html_output += ", ";
+                if(companies[i].description.publications.length>0){
+                    html_output += "<li>Publications: ";
+                    for(l=0; l<companies[i].description.publications.length;l++){
+                        html_output += ""+companies[i].description.publications[l];
+                        if((l+1)<companies[i].description.technologies.length){
+                            html_output += ", ";
+                        }
                     }
+                    html_output += "</li>";
                 }
-                html_output += "</li>";
             }
-                */
             html_output += "</ul>";
 
 
