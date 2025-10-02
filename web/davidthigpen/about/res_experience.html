@@ -1030,18 +1030,18 @@ function exp_gen_ast(){
             }
             if(companies[i].description.technologies.length>0){
                 html_output += "<li>Technologies: ";
+                for(l=0; l<companies[i].description.technologies.length;l++){
+                    html_output += ""+companies[i].description.technologies[l]+", ";
+                }
+                html_output += "</li>";
             }
-            for(l=0; l<companies[i].description.technologies.length;l++){
-                html_output += ""+companies[i].description.technologies[l]+", ";
-            }
-            html_output += "</li>";
             if(companies[i].description.publications.length>0){
-                html_output += "<li>Publications:<br />";
+                html_output += "<li>Publications: ";
+                for(l=0; l<companies[i].description.publications.length;l++){
+                    html_output += ""+companies[i].description.publications[l]+", ";
+                }
+                html_output += "</li>";
             }
-            for(l=0; l<companies[i].description.publications.length;l++){
-                html_output += "- "+companies[i].description.publications[l]+", ";
-            }
-            html_output += "</li>";
             html_output += "</ul>";
 
 
