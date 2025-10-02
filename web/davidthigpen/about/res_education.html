@@ -3,15 +3,90 @@
 <div class="lineFull"></div>
 <h3>Degrees</h3>
 <div class="lineHalf"></div>
-<h4>The University of Mississippi, Oxford, MS</h4>
-<ul>
-    <li>M.S. Computer and Information Science August 2011</li>
-    <li>M.A. Economics May 2011</li>
-    <li>M.A. Journalism December 2010</li>
-    <li>B.A. Computer and Information Science August 2007</li>
-    <li>B.A. Economics August 2007</li>
-    <li>B.A. Journalism August 2007</li>
-    <li>B.S. Math August 2007</li>
-</ul>
+<div id="degrees">
+    <h4>The University of Mississippi; Oxford, MS</h4>
+    <ul>
+        <li>M.S. Computer and Information Science | August 2011</li>
+        <li>M.A. Economics | May 2011</li>
+        <li>M.A. Journalism | December 2010</li>
+        <li>B.A. Computer and Information Science | August 2007</li>
+        <li>B.A. Economics | August 2007</li>
+        <li>B.A. Journalism | August 2007</li>
+        <li>B.S. Math | August 2007</li>
+    </ul>
+</div>
+<div id="resume_edu"></div> 
 
+<!-- 
+<button onclick="edu_gen_ast()">Load Data</button>
+Test 
+<pre id="output">
+</pre> 
+-->
 
+<script>
+function edu_load_data(){
+    var universities = [];
+    var root_ul_list = document.getElementById("degrees").children;
+    var i=0;
+    var university = {
+        school:"",
+        location:"",
+        degrees:[]
+    }
+    for(i=0;i<root_ul_list.length;i++){
+        if(root_ul_list[i].tagName=="H4"){
+            var text_holder = root_ul_list[i].innerHTML; 
+            var whole_holder = text_holder.split('; ');
+            university.school = whole_holder[0];
+            university.location = whole_holder[1];
+        }
+        else if(root_ul_list[i].tagName=="UL"){
+            var degree_breakout = root_ul_list[i].children;
+            var j=0;
+            for(j=0;j<degree_breakout.length;j++){
+                if(degree_breakout[j].tagName=="LI"){
+                    var degree = {
+                        name:"",
+                        date:""
+                    }
+                    var text_holder = degree_breakout[j].innerHTML; 
+                    var whole_holder = text_holder.split(' | ')
+                    degree.name = whole_holder[0];
+                    degree.date = whole_holder[1];
+                    university.degrees.push(degree);
+                }
+            }
+            universities.push(university);
+            university = {
+                school:"",
+                location:"",
+                degrees:[]
+            }
+        }
+    }
+    // document.getElementById("output").innerHTML = JSON.stringify(universities);
+    return universities;
+}
+function edu_gen_ast(){
+    var universities = edu_load_data();
+    var i=0;
+    var html_output="";
+    html_output += "<ul>";
+    for(i=0;i<universities.length;i++){
+        var j=0;
+        for(j=0;j<universities[i].degrees.length;j++){
+            html_output += "<li>";
+            html_output += ""+universities[i].degrees[j].name+"<br />";
+            html_output += ""+universities[i].school+", ";
+            html_output += ""+universities[i].location+"|";
+            html_output += ""+universities[i].degrees[j].date+"<br />";
+            html_output += "</li>";
+        }
+    }
+    html_output += "</ul>";
+    document.getElementById("resume_edu").innerHTML = html_output;
+    document.getElementById("degrees").hidden=true;
+
+}
+</script>

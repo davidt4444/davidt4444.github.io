@@ -585,7 +585,7 @@
         </ul>
     </ul>
     <ul>
-        <li><em>New York Life</em> Ridgeland, MS; January <span class="exact_date_hours">1, </span>2017 to March <span class="exact_date_hours">31, </span>2017</li>
+        <li><em>New York Life</em> - Ridgeland, MS; January <span class="exact_date_hours">1, </span>2017 to March <span class="exact_date_hours">31, </span>2017</li>
         <div class="exact_date_hours"> - Variable Hourly Workweek</div>
         <ul>
             <li>Associate; January <span class="exact_date_hours">1, </span>2017 to March <span class="exact_date_hours">31, </span>2017</li>
@@ -893,17 +893,17 @@
         </ul>
     </ul>
 </div>
-<div id="resume"></div> 
+<div id="resume_exp"></div> 
 
 <!-- 
-<button onclick="gen_ast()">Load Data</button>
+<button onclick="exp_gen_ast()">Load Data</button>
 Test 
 <pre id="output">
 </pre>
 -->
 
 <script>
-function strip_comma_sub_list(root_element){
+function exp_strip_comma_sub_list(root_element){
     var stuff = [];
     var root_ul_list = root_element.children;
     var i=0;
@@ -920,12 +920,12 @@ function strip_comma_sub_list(root_element){
     }
     return stuff;
 }
-function strip_span(text_data){
+function exp_strip_span(text_data){
     var regex = new RegExp("<span.*?>.*?</span>");
     var temp = text_data.replace(regex, '');
     return temp.replace(regex, '');
 }
-function load_data(){
+function exp_load_data(){
     var companies = [];
     var root_ul_list = document.getElementById("companies").children;
     var i=0;
@@ -950,7 +950,7 @@ function load_data(){
                    company.name = company_holder[0];
                    company.location = company_holder[1];
                    company.date_range = whole_holder[1];
-                   company.month_range = strip_span(whole_holder[1]);
+                   company.month_range = exp_strip_span(whole_holder[1]);
 
                 }
                 else if(job_breakout[j].tagName=="UL"){
@@ -973,7 +973,7 @@ function load_data(){
                             var whole_holder = text_holder.split('; ')
                             position.title = whole_holder[0];
                             position.date_range = whole_holder[1];
-                            position.month_range = strip_span(whole_holder[1]);
+                            position.month_range = exp_strip_span(whole_holder[1]);
                             
                            company.positions.push(position);
                         }
@@ -984,10 +984,10 @@ function load_data(){
                                 if(description_breakout[l].tagName=="LI"
                                 &&description_breakout[l].children.length>0){
                                     if(description_breakout[l].children[0].className=="exp_technologies"){
-                                        description.technologies = strip_comma_sub_list(description_breakout[l].children[0]);
+                                        description.technologies = exp_strip_comma_sub_list(description_breakout[l].children[0]);
                                     }
                                     if(description_breakout[l].children[0].className=="exp_publications"){
-                                        description.publications = strip_comma_sub_list(description_breakout[l].children[0]);
+                                        description.publications = exp_strip_comma_sub_list(description_breakout[l].children[0]);
                                     }
                                 }
                                 else if(description_breakout[l].tagName=="LI"){
@@ -1006,8 +1006,8 @@ function load_data(){
     // document.getElementById("output").innerHTML = JSON.stringify(companies);
     return companies;
 }
-function gen_ast(){
-    var companies = load_data();
+function exp_gen_ast(){
+    var companies = exp_load_data();
     var i=0;
     var html_output="";
     for(i=0;i<companies.length;i++){
