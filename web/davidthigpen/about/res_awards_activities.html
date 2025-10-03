@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="https://www.davidthigpen.com/web/davidthigpen/style.css" />
 <h3>Awards and Activities</h3>
-<ul>
+<ul id="awards">
     <li>Member of Upsilon Pi Epsilon, an international honor society for the computing and information disciplines (Inducted Spring 2009). The membership requirements can be found at <a href="http://upe.acm.org/member_requirements.htm">http://upe.acm.org/member_requirements.htm</a>.
     </li>
     <li>Member of the UM programming team at the Consortium for Computer Sciences in Colleges: Mid-South Conference at Arkansas Tech University. (Spring 2008)
@@ -25,3 +25,22 @@
     </li>
 </ul>
 
+<!-- 
+<pre id="output"></pre> 
+-->
+
+<script>
+function awards_load_data(){
+    var awards = [];
+    var root_ul_list = document.getElementById("awards").children;
+    var i=0;
+    for(i=0;i<root_ul_list.length;i++){
+        if(root_ul_list[i].tagName=="LI"){
+            awards.push(root_ul_list[i].innerHTML);
+        }
+    }
+    // document.getElementById("output").innerHTML = JSON.stringify(awards);
+    return awards;
+}
+
+</script>

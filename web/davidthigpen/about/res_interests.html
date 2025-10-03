@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="https://www.davidthigpen.com/web/davidthigpen/style.css" />
 <h3>Interests</h3>
-<ul>
+<ul id="interests">
     <li>Programming Languages</li>
     <ul>
         <li>For my master's project in computer science, I developed a programming language called FASPL - the fast adaptive spatial programming language - to aid researchers in generating XDDL files, which are files used to perform joins in the Granite database system.</li>
@@ -17,3 +17,41 @@
             the new magazine launches for each year.</li>
     </ul>
 </ul>
+
+<!-- 
+<pre id="output"></pre> 
+-->
+
+<script>
+function interests_load_data(){
+    var interests = [];
+    var root_ul_list = document.getElementById("interests").children;
+    var i=0;
+    var interest = {
+        label:"",
+        description:[]
+    }
+    for(i=0;i<root_ul_list.length;i++){
+        if(root_ul_list[i].tagName=="LI"){
+            interest.label=root_ul_list[i].innerHTML;
+        }
+        else if(root_ul_list[i].tagName=="UL"){
+            var description_breakout = root_ul_list[i].children;
+            var j=0;
+            for(j=0;j<description_breakout.length; j++){
+                if(description_breakout[j].tagName=="LI"){
+                    interest.description.push(description_breakout[j].innerHTML);
+                }
+            }
+            interests.push(interest);
+            interest = {
+                label:"",
+                description:[]
+            }
+        }
+    }
+    // document.getElementById("output").innerHTML = JSON.stringify(interests);
+    return interests;
+}
+
+</script>

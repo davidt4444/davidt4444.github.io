@@ -1,7 +1,27 @@
 <link rel="stylesheet" type="text/css" href="https://www.davidthigpen.com/web/davidthigpen/style.css" />
 <h3>Academic Publications</h3>
-<ul>
+<ul id="publications">
     <li>D. THIGPEN. "<a href="http://www.davidthigpen.com/project/FASPL_Project_Paper.pdf">FASPL: The Fast Adaptive Spatial Programming Language</a>." It is about a query language for geospatial data held in the NH GRANIT database at the University of New Hampshire. The paper itself is a computer science project paper at The University of Mississippi listed as a technical document in the department library.  July 2011.</li>
     <li>D. THIGPEN. "<a href="http://davidthigpen.com/project/jour_thesis7.pdf">The Theory Behind Magazine Business Decisions</a>." It is a journalism thesis and is held at The University of Mississippi library. October 2010.</li>
     <li>D. THIGPEN and A. ANDERSON. "Parallel Compression on the Cell Broadband Engine with CZIP," Journal of the Mississippi Academy of Sciences, Vol. 53, No. 1, p. 95, January 2008. </li>
 </ul>
+
+<!-- 
+<pre id="output"></pre> 
+-->
+
+<script>
+function publications_load_data(){
+    var publications = [];
+    var root_ul_list = document.getElementById("publications").children;
+    var i=0;
+    for(i=0;i<root_ul_list.length;i++){
+        if(root_ul_list[i].tagName=="LI"){
+            publications.push(root_ul_list[i].innerHTML);
+        }
+    }
+    // document.getElementById("output").innerHTML = JSON.stringify(publications);
+    return publications;
+}
+
+</script>
