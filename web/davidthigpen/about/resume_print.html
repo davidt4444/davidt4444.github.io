@@ -14,13 +14,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
         <script>
-        let site_model = {
-            universities:[],
-            skills:[],
-            companies:[],
-            publications:[],
-            awards:[]
-        };
         $(document).ready( function() {
             var base = "https://www.davidthigpen.com/web/davidthigpen/";
             //$("#content").append($("<div />").load(base+"header.html"));
@@ -37,10 +30,5 @@
 
             $("#content").append($("<div />").load(base+"footer.html"));
             $("#content").append($("<div />").load(base+"tracker.html"));
-            site_model.universities=edu_load_data();
-            site_model.skills=skills_load_data();
-            site_model.companies=exp_load_data();
-            site_model.publications=publications_load_data();
-            site_model.awards=awards_load_data();
         });
         </script>
