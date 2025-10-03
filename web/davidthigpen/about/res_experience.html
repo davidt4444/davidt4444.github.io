@@ -1006,7 +1006,7 @@ function exp_load_data(){
     // document.getElementById("output").innerHTML = JSON.stringify(companies);
     return companies;
 }
-function exp_gen_ast(exclude_tech_publications=true){
+function exp_gen_ast(abbreviate=true){
     var companies = exp_load_data();
     var i=0;
     var html_output="";
@@ -1020,7 +1020,12 @@ function exp_gen_ast(exclude_tech_publications=true){
             // html_output += ""+companies[i].month_range+"<br />";
 
             // html_output += ""+companies[i].positions[j].date_range+"<br />";
-            html_output += "|"+companies[i].positions[j].month_range+"<br />";
+            if(abbreviate && companies[i].positions.length>1){
+                html_output += "|"+companies[i].month_range+"<br />";
+            }
+            else{
+                html_output += "|"+companies[i].positions[j].month_range+"<br />";
+            }
             html_output += ""+companies[i].positions[j].title+"";
             html_output += "<ul>";
 
@@ -1028,7 +1033,7 @@ function exp_gen_ast(exclude_tech_publications=true){
             for(l=0; l<companies[i].description.bullets.length;l++){
                 html_output += "<li>"+companies[i].description.bullets[l]+"</li>";
             }
-            if(exclude_tech_publications==false){
+            if(abbreviate==false){
                 if(companies[i].description.technologies.length>0){
                     html_output += "<li>Technologies: ";
                     for(l=0; l<companies[i].description.technologies.length;l++){
@@ -1051,6 +1056,9 @@ function exp_gen_ast(exclude_tech_publications=true){
                 }
             }
             html_output += "</ul>";
+            if(abbreviate){
+                break;
+            }
 
 
          }
