@@ -15,13 +15,47 @@
 
     <script>
         /*
-        let site_model = {
+        var site_model = {
             universities:[],
             skills:[],
             companies:[],
             publications:[],
             awards:[]
         };
+        var university = {
+            school:"",
+            location:"",
+            degrees:[]
+        };
+        var degree = {
+            name:"",
+            date:""
+        };
+        var skill = "";
+        var company = {
+            name :"",
+            location :"",
+            date_range :"",
+            month_range :"",
+            positions:[],
+            description:{}
+        };
+        var position = {
+            title:"",
+            date_range:"",
+            month_range:""
+        };
+        var description = {
+            bullets:[],
+            technologies:[],
+            publications:[]
+        };
+        var bullet = ""; 
+        var technology = "";
+        var publication = "";
+        var award = "";
+
+
         site_model.universities=edu_load_data();
         site_model.skills=skills_load_data();
         site_model.companies=exp_load_data();
