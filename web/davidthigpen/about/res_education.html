@@ -77,10 +77,10 @@ function edu_gen_ast(){
         var j=0;
         for(j=0;j<universities[i].degrees.length;j++){
             html_output += "<li>";
-            html_output += ""+universities[i].degrees[j].name+"<br />";
             html_output += ""+universities[i].school+", ";
             html_output += ""+universities[i].location+"|";
             html_output += ""+universities[i].degrees[j].date+"<br />";
+            html_output += ""+universities[i].degrees[j].name+"<br />";
             html_output += "</li>";
         }
     }
