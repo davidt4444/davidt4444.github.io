@@ -1,9 +1,4 @@
 <link rel="stylesheet" type="text/css" href="https://www.davidthigpen.com/web/davidthigpen/style.css" />
-<style>
-    #technologies{
-        display:none;
-    }
-</style>
 <div class="technologies_technologies">
     <h2><a name="Technologies">Technical Skills</a></h2>
     <div class="lineFull"></div>
@@ -356,6 +351,7 @@ Test
 </pre>  
 -->
 <script>
+document.getElementById("technologies_categorized").hidden= true;
 function skills_load_data(){
     var skills = [];
     var root_ul_list = document.getElementById("technologies").children;
@@ -379,8 +375,12 @@ function skills_gen_ast(){
     }
     html_output += "</ul>";
     document.getElementById("resume_skills").innerHTML = html_output;
-    document.getElementById("technologies_categorized").hidden=true;
+    document.getElementById("technologies").hidden=true;
 
+}
+function categorize_flip(){
+    document.getElementById("technologies").hidden=!document.getElementById("technologies").hidden;
+    document.getElementById("technologies_categorized").hidden=!document.getElementById("technologies_categorized").hidden;
 }
 
 </script>
